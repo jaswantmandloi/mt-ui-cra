@@ -62,7 +62,7 @@ export const useStylesSearch = makeStyles((theme) => ({
 export const useStylesMenus = makeStyles((theme) => ({
   container: {
     display: "flex",
-    "& a": {
+    "& a, button": {
       color: theme.palette.text.light,
       margin: `0 ${theme.spacing(2)}px`,
     },

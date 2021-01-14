@@ -19,6 +19,7 @@ import {
   useStylesMenus,
 } from "./HeaderStyles";
 import { getBreakPointsWidths } from "features/material-ui/demo1/Utils";
+import { Button } from "@material-ui/core";
 
 export default function Header() {
   const containerClasses = useStylesContainer();
@@ -83,9 +84,9 @@ export default function Header() {
           justify="flex-end"
         >
           <Box display="flex" justifyContent="space-around">
-            <Link href="#">
+            <Button>
               <Typography variant="subtitle2">Sign In</Typography>
-            </Link>
+            </Button>
             <Link href="#">
               <HelpOutline />
             </Link>
