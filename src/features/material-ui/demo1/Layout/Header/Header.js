@@ -5,7 +5,6 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
 import Box from "@material-ui/core/Box";
-import Typography from "@material-ui/core/Typography";
 import SearchIcon from "@material-ui/icons/Search";
 import HelpOutline from "@material-ui/icons/HelpOutline";
 import ShoppingCart from "@material-ui/icons/ShoppingCart";
@@ -19,7 +18,7 @@ import {
   useStylesMenus,
 } from "./HeaderStyles";
 import { getBreakPointsWidths } from "features/material-ui/demo1/Utils";
-import { Button } from "@material-ui/core";
+import LoginPopover from "./LoginPopover";
 
 export default function Header() {
   const containerClasses = useStylesContainer();
@@ -84,9 +83,7 @@ export default function Header() {
           justify="flex-end"
         >
           <Box display="flex" justifyContent="space-around">
-            <Button>
-              <Typography variant="subtitle2">Sign In</Typography>
-            </Button>
+            <LoginPopover />
             <Link href="#">
               <HelpOutline />
             </Link>
