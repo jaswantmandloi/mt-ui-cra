@@ -7,9 +7,15 @@ import Login from "features/material-ui/demo1/Login/Login";
 
 const LoginPopover = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorRefPosition, setAnchorRefPosition] = useState({
+    current: { top: 70, left: 0, bottom: 70 },
+  });
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    const element = event.currentTarget;
+    const rects = element.getClientRects();
+    setAnchorRefPosition({ current: rects[0] });
+    setAnchorEl(element);
   };
 
   const handleClose = () => {
@@ -27,16 +33,21 @@ const LoginPopover = () => {
       <Popover
         id={id}
         open={open}
-        anchorEl={anchorEl}
+        anchorReference="anchorPosition"
+        //anchorEl={anchorEl}
         onClose={handleClose}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "bottom",
+        anchorPosition={{
+          top: anchorRefPosition.current.bottom,
+          left: anchorRefPosition.current.left,
         }}
-        transformOrigin={{
-          vertical: "bottom",
-          horizontal: "bottom",
-        }}
+        // anchorOrigin={{
+        //   vertical: "bottom",
+        //   horizontal: "right",
+        // }}
+        // transformOrigin={{
+        //   vertical: "bottom",
+        //   horizontal: "right",
+        // }}
       >
         <Login />
       </Popover>
