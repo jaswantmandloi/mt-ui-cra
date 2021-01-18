@@ -1,10 +1,10 @@
 import Layout from "features/material-ui/demo1/Layout/Layout";
-import Login from "features/material-ui/demo1/Login/Login";
+// import Help from "features/material-ui/demo1/Help/Help";
 function App() {
   return (
     <Layout>
       <div>main</div>
-      <Login />
+      {/* <Help /> */}
     </Layout>
   );
 }

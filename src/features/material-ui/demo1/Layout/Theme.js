@@ -20,4 +20,7 @@ export const theme = createMuiTheme({
   shape: {
     searchBoxBorderRadius: 10,
   },
+  typography: {
+    lineHeight2: 2,
+  },
 });

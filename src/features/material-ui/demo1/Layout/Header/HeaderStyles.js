@@ -64,7 +64,7 @@ export const useStylesMenus = makeStyles((theme) => ({
     display: "flex",
     "& a, button": {
       color: theme.palette.text.light,
-      margin: `0 ${theme.spacing(2)}px`,
+      //margin: `0 ${theme.spacing(2)}px`,
     },
   },
 }));
