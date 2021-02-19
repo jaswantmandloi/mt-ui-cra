@@ -14,6 +14,8 @@ const LoginPopover = () => {
   const handleClick = (event) => {
     const element = event.currentTarget;
     const rects = element.getClientRects();
+    // eslint-disable-next-line no-console
+    console.log("rects", rects);
     setAnchorRefPosition({ current: rects[0] });
     setAnchorEl(element);
   };
