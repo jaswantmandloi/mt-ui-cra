@@ -1,11 +1,11 @@
 import Popover from "@material-ui/core/Popover";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import ShoppingCart from "@material-ui/icons/ShoppingCart";
 import { useState } from "react";
 
-import Login from "features/material-ui/demo1/Login/Login";
+import Cart from "features/material-ui/demo1/Cart/Cart";
 
-const LoginPopover = () => {
+const CartPopover = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorRefPosition, setAnchorRefPosition] = useState({
     current: { top: 70, left: 0, bottom: 70 },
@@ -28,7 +28,7 @@ const LoginPopover = () => {
   return (
     <>
       <Button aria-describedby={id} onClick={handleClick}>
-        <Typography variant="subtitle2">Sign In</Typography>
+        <ShoppingCart />
       </Button>
       <Popover
         id={id}
@@ -49,10 +49,10 @@ const LoginPopover = () => {
         //   horizontal: "right",
         // }}
       >
-        <Login />
+        <Cart />
       </Popover>
     </>
   );
 };
 
-export default LoginPopover;
+export default CartPopover;

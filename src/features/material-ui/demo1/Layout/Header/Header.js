@@ -6,7 +6,6 @@ import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
 import Box from "@material-ui/core/Box";
 import SearchIcon from "@material-ui/icons/Search";
-import ShoppingCart from "@material-ui/icons/ShoppingCart";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 
 import {
@@ -19,7 +18,7 @@ import {
 import { getBreakPointsWidths } from "features/material-ui/demo1/Utils";
 import LoginPopover from "./LoginPopover";
 import Help from "features/material-ui/demo1/Help/Help";
-import { Button } from "@material-ui/core";
+import CartPopover from "features/material-ui/demo1/Layout/Header/CartPopover";
 
 export default function Header() {
   const containerClasses = useStylesContainer();
@@ -86,9 +85,7 @@ export default function Header() {
             <Box display="flex" justifyContent="space-around">
               <LoginPopover />
               <Help />
-              <Button>
-                <ShoppingCart />
-              </Button>
+              <CartPopover />
             </Box>
           </Grid>
         </Grid>
